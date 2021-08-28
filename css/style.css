@@ -68,7 +68,7 @@ header {
 }
 
 .logo img {
-  height: 4rem;
+  height: 3rem;
 }
 .social {
   grid-area: social;
