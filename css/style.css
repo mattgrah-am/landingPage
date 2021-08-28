@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --back: hsl(0, 0%, 10%);
+  --prim: hsl(350, 65%, 45%);
+  --second: hsl(0, 0%, 98%);
+}
+
+html {
+  background-color: var(--back);
+  color: var(--second);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--second);
+  text-decoration: none;
+}
+
+header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    ". . . ."
+    ". logo name ."
+    ". . social ."
+    ". . . .";
+}
+
+.logo {
+  grid-area: logo;
+  justify-self: end;
+  align-self: end;
+  color: var(--second);
+  cursor: pointer;
+}
+
+.logo h1 {
+  font-size: 4rem;
+  letter-spacing: -0.7rem;
+}
+
+.name {
+  grid-area: name;
+  justify-self: start;
+  align-self: end;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  padding: 0.5rem 0 0 1rem;
+}
+
+.logo img {
+  height: 4rem;
+}
+.social {
+  grid-area: social;
+  justify-self: start;
+  align-self: top;
+  font-family: "Poppins", sans-serif;
+  padding: 0 0 0 6.8rem;
+  list-style: none;
+}
+
+.navLink {
+  list-style: none;
+}
+
+.social li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+.social li a {
+  transform: all 0.3s ease 0s;
+}
+
+.social li a:hover {
+  color: var(--prim);
+}
+
+.social i {
+  padding-right: 0.5rem;
+}
+
+span.reverse {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
