@@ -15,52 +15,27 @@ html {
   color: var(--second);
 }
 
-h1,
-h2,
-h3 {
-  font-family: "DM Sans", sans-serif;
-}
-
-p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  color: var(--second);
   text-decoration: none;
 }
 
-header {
-  min-height: 100vh;
-  display: grid;
-  grid-template-areas:
-    ". . . ."
-    ". logo name ."
-    ". . social ."
-    ". . . .";
-}
-
-.logo {
-  grid-area: logo;
-  justify-self: end;
-  align-self: end;
-  color: var(--second);
-  cursor: pointer;
-}
-
 .logo h1 {
+  font-family: "DM Sans", sans-serif;
+  display: inline-block;
   font-size: 3rem;
   letter-spacing: -0.7rem;
 }
 
 .name {
-  grid-area: name;
-  justify-self: start;
-  align-self: end;
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
@@ -71,36 +46,21 @@ header {
   height: 3rem;
 }
 .social {
-  grid-area: social;
-  justify-self: start;
-  align-self: top;
-  font-family: "Poppins", sans-serif;
-  padding: 0 0 0 6.2rem;
+  padding: 0 0 0 11rem;
   list-style: none;
 }
 
-.navLink {
-  list-style: none;
+.mail,
+.github,
+.twitter {
+  fill: var(--second);
+  margin-right: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.social li {
-  display: inline-block;
-  padding: 0 1.25rem;
-}
-
-.social li a {
-  transform: all 0.3s ease 0s;
-}
-
-.social li a:hover {
-  color: var(--prim);
-}
-
-.social i {
-  padding-right: 0.5rem;
-}
-
-span.reverse {
-  unicode-bidi: bidi-override;
-  direction: rtl;
+.mail:hover,
+.github:hover,
+.twitter:hover {
+  fill: var(--prim);
 }
